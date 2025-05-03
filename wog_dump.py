@@ -61,7 +61,7 @@ def unpack_weaponlist():
     for obj in env.objects:
         if obj.type.name == "TextAsset":
             data = obj.read()
-            if data.name == "new_banners":
+            if data == "new_banners":
                 with open("weapons.txt", "w") as f:
                     text = data.text.replace("\r", "")
                     lines = text.split("\n")
